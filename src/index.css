@@ -1,0 +1,225 @@
+/* Navbar */
+.headerNav {
+  margin-bottom: 9rem;
+}
+.navbar {
+  height: 20vh;
+  box-shadow: 3px 8px 26px #ffb766;
+  font-size: 20px;
+}
+nav a {
+  margin: 15px;
+  text-decoration: none;
+  transition: 0.6s;
+  
+}
+nav a:hover {
+  border-bottom: 1px solid #ffb766;
+  transition: 0.8s;
+}
+.logo img {
+  width: 120px;
+  position: relative;
+}
+
+/* Home section */
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  url(assets/dressOne.webp);
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding-left: 8%;
+  padding-right: 8%;
+  text-align: center;
+  height: 81vh;
+}
+.hero {
+  text-align: center;
+  color: white;
+  margin-top: 5rem;
+  padding-top: 40px;
+}
+.hero h1 {
+  font-weight: 500;
+  margin-top: 12rem;
+  font-size: 50px;
+  margin-bottom: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero p {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Images styling for the products */
+.storeImage img {
+  width: 285px;
+  height: 285px;
+}
+
+/* Cart section */
+.cartPage {
+  background-color: antiquewhite;
+  max-width: 360px;
+  height: auto;
+  box-shadow: 3px 4px 23px 18px rgba(122, 122, 141, 0.256);
+  margin: 12rem auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cartPage h2 {
+  text-align: center;
+}
+
+.products {
+  margin-left: 5rem;
+  display: inline-block;
+}
+.productsBackground {
+  background-color: rgba(215, 244, 236, 0.722);
+  padding-top: 5rem;
+}
+.heading {
+  color: rgb(76, 74, 74);
+  font-size: 30px;
+}
+
+.loginIcon-md-screen {
+  display: none;
+}
+
+/* Form section */
+.formSection {
+  text-align: center;
+  background-color: #ffb8669b;
+  width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 3px 4px 18px 5px rgba(0, 0, 0, 0.507);
+  border-radius: 10px;
+  margin-top: 12rem;
+}
+.formSection label {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+/* Register section */
+.register {
+  background-color: #ffb8669b;
+  padding: 40px;
+  margin-top: 25rem;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 3px 5px 30px black;
+  border-radius: 10px;
+  margin-top: 15rem;
+}
+.register label {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  font-size: 18px;
+}
+.register input {
+  margin-bottom: 1rem;
+  border:  none;
+  border-radius: 5px;
+  width: 300px;
+
+}
+
+.formSection input {
+  margin-bottom: 1rem;
+}
+
+/* Help section */
+.help-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+  margin-top: 15rem;
+}
+
+.help-container h2 {
+  margin-bottom: 16px;
+}
+
+.help-container p {
+  margin: 8px 0;
+}
+
+.login-md-screen {
+  margin-top: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 620px) {
+  .mylinks {
+  font-size: 18px;
+  padding: 10px;
+  }
+  .logo img {
+    width: 100px;
+    margin-top: 2rem;
+    margin-left: 60rem;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+   }
+   .cart {
+    display: none;
+   }
+}
+@media (max-width: 560px) {
+ 
+  .mylinks {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+ @media (max-width: 390px) {
+  .mylinks {
+    font-size: 15px;
+    padding: 30px;
+  } 
+  .hero p {
+    display: none;
+  }
+}
+
+@media (max-width: 821px) {
+  .loginIcon-md-screen {
+    display: block;
+    margin-right: 2rem;
+  }
+  .login-md-screen {
+    display: none;
+  }
+}
+
+@media (max-width: 710px) {
+ .products {
+  margin-left: 8rem;
+ }
+
+}
+
+@media (max-width: 510px) {
+  .products {
+   margin-left: 5rem;
+  }
+
+ }
+
