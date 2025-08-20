@@ -79,7 +79,7 @@ function Header({ username, onLogout }) {
             </div>
           ) : (
             <span>
-              <a href="/login">
+              <a href="/register">
                 <img src={add} alt="" style={{ width: "28px" }} />
               </a>
             </span>
