@@ -1,8 +1,10 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 function Login({ users, onLogin }) {
+  const navigate = useNavigate();
   const initialValues = { username: "", password: "" };
 
   const validationSchema = Yup.object({
@@ -17,6 +19,7 @@ function Login({ users, onLogin }) {
     if (user) {
       onLogin(user); // Log in the user
       resetForm();
+      navigate("/")
     } else {
       alert("Invalid username or password. Please try again.");
     }
