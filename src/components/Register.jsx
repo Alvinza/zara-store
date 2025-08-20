@@ -34,7 +34,7 @@ function Register({ onRegister }) {
     onRegister(values); // Add new user
     resetForm(); // Clear the form
     alert("Registration successful!");
-    navigate(/login);
+    navigate("/login");
   };
 
   return (
