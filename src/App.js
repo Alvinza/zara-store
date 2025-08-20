@@ -12,43 +12,38 @@ import Register from "./components/Register";
 import Help from "./components/Help.jsx";
 
 function App() {
+  const [users, setUsers] = useState([]); // Store registered users 
+  const [loggedInUser, setLoggedInUser] = useState(null);  // Track the currently logged-in user
 
-  // Array of registered users
-  const [users, setUsers] = useState([]); 
-  
-  // Current logged-in user
-  const [loggedInUser, setLoggedInUser] = useState(null); 
-  
-  // Add new user to states
+   // Function to handle user registration
   const handleRegister = (newUser) => {
     setUsers((prevUsers) => [...prevUsers, newUser]); 
   };
 
-  // Logout handler
+  // Function to handle logout
   const handleLogout = () => setLoggedInUser(null); 
 
   return (
-        <div className="App">
+    <div className="App">
       <Header username={loggedInUser?.username} onLogout={handleLogout} />
-      {loggedInUser ? (
-        <h2 style={{ textAlign: "center", display: "none" }}>
-          Welcome, {loggedInUser.username}
+  
+      {/* Show welcome message if user is logged in */}
+      {loggedInUser && (
+        <h2 style={{ textAlign: "center", marginTop: "10px" }}>
+          Welcome, {loggedInUser.username} 👋
         </h2>
-      ) : (
-        <div>
-          <Register onRegister={handleRegister} />
-          <Login users={users} onLogin={setLoggedInUser} />
-        </div>
       )}
+
+        {/* Routes control what page/component is displayed */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/store" element={<StorePage />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login users={users} onLogin={setLoggedInUser} />} />
+        <Route path="/register" element={<Register onRegister={handleRegister} />} />
         <Route path="/help" element={<Help />} />
       </Routes>
-    </div> 
+    </div>
   );
 }
 
