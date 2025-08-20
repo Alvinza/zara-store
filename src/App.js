@@ -26,13 +26,6 @@ function App() {
   return (
     <div className="App">
       <Header username={loggedInUser?.username} onLogout={handleLogout} />
-  
-      {/* Show welcome message if user is logged in */}
-      {loggedInUser && (
-        <h2 style={{ textAlign: "center", marginTop: "10px" }}>
-          Welcome, {loggedInUser.username} 👋
-        </h2>
-      )}
 
         {/* Routes control what page/component is displayed */}
       <Routes>
