@@ -16,7 +16,7 @@ const Cart = () => {
           <ul>
             {cart.map((item, index) => (
               <li key={index} style={{margin: '1rem'}}>
-                {item.image}
+                <img src={item.image}/>
                 {item.name} - R{item.price}               
                 <div style={{width: '100px'}}>
                 <button className="btn btn-danger" onClick={() => removeFromCart(item.id)} style={{ marginLeft: "15px" }}>
