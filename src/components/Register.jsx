@@ -1,8 +1,10 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 function Register({ onRegister }) {
+  const navigate = useNavigate();
   const initialValues = {
     firstName: "",
     surname: "",
@@ -11,6 +13,7 @@ function Register({ onRegister }) {
     password: "",
   };
 
+  const navigate = () => useNavigation();
   const validationSchema = Yup.object({
     firstName: Yup.string().required("First name is required"),
     surname: Yup.string().required("Surname is required"),
@@ -31,6 +34,7 @@ function Register({ onRegister }) {
     onRegister(values); // Add new user
     resetForm(); // Clear the form
     alert("Registration successful!");
+    navigate(/login);
   };
 
   return (
