@@ -13,7 +13,6 @@ function Register({ onRegister }) {
     password: "",
   };
 
-  const navigate = () => useNavigation();
   const validationSchema = Yup.object({
     firstName: Yup.string().required("First name is required"),
     surname: Yup.string().required("Surname is required"),
