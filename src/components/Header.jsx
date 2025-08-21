@@ -64,7 +64,7 @@ function Header({ username, onLogout }) {
             <div className="welcome"> 
               
               <div className="login-md-screen">
-              <span className="welcomeMessage">Welcome, {username}!</span>
+              <span className="welcomeMessage">Hi {username}</span>
               <a
                 href="#register"
                 onClick={onLogout}
