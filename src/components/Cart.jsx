@@ -16,8 +16,44 @@ const Cart = () => {
           <ul>
             {cart.map((item, index) => (
               <li key={index} style={{margin: '1rem'}}>
-                <img src={item.image}/>
-                {item.name} - R{item.price}               
+                <div style={{ flexShrink: 0 }}>
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    style={{
+                      width: '80px',
+                      height: '80px',
+                      objectFit: 'cover',
+                      borderRadius: '4px',
+                      border: '1px solid #ccc'
+                    }}
+                  />
+                </div>
+                
+                <div style={{ 
+                  flex: 1, 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  gap: '0.25rem'
+                }}>
+                  <h5 style={{ 
+                    margin: 0, 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    color: '#333'
+                  }}>
+                    {item.name}
+                  </h5>
+                  <p style={{ 
+                    margin: 0, 
+                    fontSize: '1.2rem',
+                    fontWeight: 'bold',
+                    color: '#007bff'
+                  }}>
+                    R{item.price}
+                  </p>
+                </div>
+                </div>               
                 <div style={{width: '100px'}}>
                 <button className="btn btn-danger" onClick={() => removeFromCart(item.id)} style={{ marginLeft: "15px" }}>
                   Remove
