@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 function LandingPage() {
     return (
-        // Home page
         <div className="home">
             <div className="hero">
             <h1>Welcome to Zara Best Clothing</h1>
