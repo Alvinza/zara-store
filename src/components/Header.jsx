@@ -52,6 +52,14 @@ function Header({ username, onLogout }) {
             ({cart.length})
           </Link>
         </Nav>
+         {/* 🔍 Search button */}
+        <Button
+          variant="outline-dark"
+          className="mx-3"
+          onClick={onSearchClick}
+        >
+          🔍 Search
+        </Button>
         <header
           style={{
             display: "flex",
