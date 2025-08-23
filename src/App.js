@@ -15,6 +15,7 @@ import Men from './components/Men.jsx';
 import Jewellery from './components/Jewellery.jsx';
 import Shoes from './components/Shoes.jsx';
 import Footer from './components/Footer.jsx';
+import SearchModal from './components/SearchModal';
 
 function App() {
   const [users, setUsers] = useState([]); // Store registered users
@@ -52,7 +53,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header username={loggedInUser?.username} onLogout={handleLogout} />
+      <Header 
+        username={loggedInUser?.username} 
+        onLogout={handleLogout} 
+        onSearchClick={() => setShowSearch(true)} // pass modal trigger
+      />
 
       {/* Routes control what page/component is displayed */}
       <Routes>
