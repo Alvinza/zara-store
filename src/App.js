@@ -53,7 +53,8 @@ function App() {
   };
   
   // ✅ Combine all products (expand this when you add men/women/shoes arrays)
-  const allProducts = [...products, ...jewelleryGallery /* , ...menProducts, ...womenProducts, ...shoesProducts */];
+  const allProducts = [...jewelleryGallery];
+
 
   return (
     <div className="App">
