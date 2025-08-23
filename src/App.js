@@ -20,6 +20,7 @@ import SearchModal from './components/SearchModal';
 function App() {
   const [users, setUsers] = useState([]); // Store registered users
   const [loggedInUser, setLoggedInUser] = useState(null); // Track the currently logged-in user
+  onst [showSearch, setShowSearch] = useState(false); // control search modal
 
   // 🔹 On first load, check if users & logged-in user exist in localStorage
   useEffect(() => {
