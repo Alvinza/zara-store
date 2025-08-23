@@ -7,7 +7,7 @@ import logoutIcon from "../assets/quit.png";
 import { useCart } from "../context/CartContext";
 import addCart from "../assets/add-to-cart.png";
 
-function Header({ username, onLogout }) {
+function Header({ username, onLogout, onSearchClick }) {
   const { cart } = useCart();
   return (
     // Navbar section
