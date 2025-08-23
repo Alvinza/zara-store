@@ -1,7 +1,7 @@
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import LandingPage from './components/LandingPage';
@@ -61,7 +61,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route
           path="/login"
-          element={<Login users={users} onLogin={setLoggedInUser} />}
+          element={<Login users={users} onLogin={handleLogin} />}
         />
         <Route
           path="/register"
