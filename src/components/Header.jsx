@@ -43,7 +43,7 @@ function Header({ username, onLogout }) {
           <Link to="/login" className="nav-link">
             Login
           </Link>
-          <Link to="/cart">
+          <Link to="/cart" style={{ color: "#ffb766"}}>
             <img
               src={addCart}
               alt=""

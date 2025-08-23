@@ -1,31 +1,24 @@
-import React from "react";
-import { useCart } from "../context/CartContext";
-import { Card } from 'react-bootstrap';
-
 // images
-import pic1 from "../assets/pic1.png";
-import pic2 from "../assets/pic2.png";
-import pic3 from "../assets/pic3.jpg";
-import pic5 from "../assets/jean.webp";
-import pic6 from "../assets/milano.webp";
-import dressOne from "../assets/dressOne.webp";
-import dressTwo from "../assets/dressTwo.webp";
-import dressThree from "../assets/dressThree.webp";
-import dressFour from "../assets/dressFour.webp";
-import suit from "../assets/suit.webp";
-import newPic1 from '../assets/newPic1.png';
-import newPic2 from '../assets/newPic2.png';
-import newPic3 from '../assets/newPic3.png';
-import newPic4 from '../assets/newPic4.png';
-import newPic5 from '../assets/newPic5.png';
-import newPic6 from '../assets/newPic6.png';
-import newPic7 from '../assets/newPic7.png';
-import newPic8 from '../assets/newPic8.png';
+import pic1 from "./pic1.png";
+import pic2 from "./pic2.png";
+import pic3 from "./pic3.jpg";
+import pic5 from "./jean.webp";
+import pic6 from "./milano.webp";
+import dressOne from "./dressOne.webp";
+import dressTwo from "./dressTwo.webp";
+import dressThree from "./dressThree.webp";
+import dressFour from "./dressFour.webp";
+import suit from "./suit.webp";
+import newPic1 from './newPic1.png';
+import newPic2 from './newPic2.png';
+import newPic3 from './newPic3.png';
+import newPic4 from './newPic4.png';
+import newPic5 from './newPic5.png';
+import newPic6 from './newPic6.png';
+import newPic7 from './newPic7.png';
+import newPic8 from './newPic8.png';
 
-
-function StorePage() {
-    const { addToCart } = useCart();
-    const products = [
+const products = [
         {
             id: 1,
             name: "Black suit",
@@ -154,28 +147,4 @@ function StorePage() {
           },
     ];
 
-    return (
-        // Store section, I used bootstrap for the card, I also used map method to render the products
-       <div className="storeImage productsBackground">
-        <h1 className='text-center'>Products</h1>
-         <div className="d-flex flex-wrap products">
-            {products.map(product => (
-                <Card key={product.id} style={{ width: '18rem', margin: '10px' }}>
-                    <Card.Img variant="top" src={product.image} />
-                    <Card.Body>
-                        <Card.Title>{product.name}</Card.Title>
-                        <Card.Text>{product.description}</Card.Text>
-                        <Card.Text><b>Price: R{product.price}</b></Card.Text>
-                        <button className='btn' style={{backgroundColor: '#ffb766', border: 'none'}}
-                         onClick={() => {addToCart(product)}}>Add to Cart</button>
-                    </Card.Body>
-                </Card>
-            ))}
-        </div>
-       </div>
-    );
-}
-
-export default StorePage;
-
-
+    export default products;

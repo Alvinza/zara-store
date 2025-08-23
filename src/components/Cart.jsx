@@ -65,7 +65,7 @@ const Cart = () => {
 
                 {/* Remove button */}
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-dark"
                   onClick={() => removeFromCart(item.id)}
                 >
                   Remove
@@ -78,6 +78,7 @@ const Cart = () => {
           <h6 style={{ marginTop: "1rem", fontWeight: "bold" }}>
             Total Cost: R{totalCost}
           </h6>
+          <button className="btn btn-primary">Proceed payment</button>
         </>
       ) : (
         <p>Your cart is empty</p>

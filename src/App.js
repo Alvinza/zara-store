@@ -4,12 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import LandingPage from "./pages/LandingPage";
-import StorePage from "./pages/StorePage";
+import LandingPage from "./components/LandingPage";
+import StorePage from "./components/StorePage";
 import Cart from "./components/Cart";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Help from "./components/Help.jsx";
+import Women from "./components/Women.jsx";
+import Men from "./components/Men.jsx";
+import Jewellery from "./components/Jewellery.jsx";
+import Shoes from "./components/Shoes.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [users, setUsers] = useState([]); // Store registered users 
@@ -35,7 +40,12 @@ function App() {
         <Route path="/login" element={<Login users={users} onLogin={setLoggedInUser} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/men" element={<Men />} />
+        <Route path="/women" element={<Women />} />
+        <Route path="/jewellery" element={<Jewellery />}/>
+        <Route path="/shoes" element={<Shoes />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }

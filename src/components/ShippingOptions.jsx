@@ -20,6 +20,7 @@ const ShippingOptions = () => {
             name="shipping"
             checked={selectedShipping?.id === option.id}
             onChange={() => handleSelect(option)}
+            className='m-2'
           />
           {option.name}  R{option.cost}
         </div>
