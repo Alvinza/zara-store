@@ -53,12 +53,12 @@ function Header({ username, onLogout, onSearchClick }) {
           </Link>
         </Nav>
          {/* 🔍 Search button */}
-        <Button
+        <button
           className="mx-3 btn btn-dark"
           onClick={onSearchClick}
         >
           🔍 Search
-        </Button>
+        </button>
         <header
           style={{
             display: "flex",
