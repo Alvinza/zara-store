@@ -54,8 +54,7 @@ function Header({ username, onLogout, onSearchClick }) {
         </Nav>
          {/* 🔍 Search button */}
         <Button
-          variant="outline-dark"
-          className="mx-3"
+          className="mx-3 btn btn-dark"
           onClick={onSearchClick}
         >
           🔍 Search
