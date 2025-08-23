@@ -16,6 +16,7 @@ import Jewellery from './components/Jewellery.jsx';
 import Shoes from './components/Shoes.jsx';
 import Footer from './components/Footer.jsx';
 import SearchModal from './components/SearchModal';
+import jewelleryGallery from './assets/jewelleryData/jewelleryData';
 
 function App() {
   const [users, setUsers] = useState([]); // Store registered users
