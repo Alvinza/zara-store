@@ -82,6 +82,12 @@ function App() {
         <Route path="/jewellery" element={<Jewellery />} />
         <Route path="/shoes" element={<Shoes />} />
       </Routes>
+             {/* 🔍 Search Modal */}
+      <SearchModal 
+        show={showSearch} 
+        handleClose={() => setShowSearch(false)} 
+        allProducts={allProducts} 
+      />
       <Footer />
     </div>
   );
