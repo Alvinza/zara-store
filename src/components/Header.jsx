@@ -8,7 +8,7 @@ import { useCart } from "../context/CartContext";
 import addCart from "../assets/add-to-cart.png";
 
 function Header({ username, onLogout, onSearchClick }) {
-  const { cart } = useCart();
+  const { cart } = useCart(); // Get cart state from context
   return (
     // Navbar section
     <div className="headerNav">
@@ -67,6 +67,7 @@ function Header({ username, onLogout, onSearchClick }) {
             
           }}
         >
+          {/* User section */}
           {username ? (
             <div className="welcome"> 
               
