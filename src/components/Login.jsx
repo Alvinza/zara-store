@@ -5,13 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 function Login({ users, onLogin }) {
   const navigate = useNavigate();
-  const initialValues = { username: "", password: "" };
+  const initialValues = { username: "", password: "" }; // Initial form values
 
+  // Validation schema using Yup
   const validationSchema = Yup.object({
     username: Yup.string().required("Username is required"),
     password: Yup.string().required("Password is required"),
   });
 
+  // Handle form submission
   const handleSubmit = (values, { resetForm }) => {
     const user = users.find(
       (u) => u.username === values.username && u.password === values.password
@@ -36,11 +38,13 @@ function Login({ users, onLogin }) {
       >
         {() => (
           <Form>
+            {/* Username Field */}
             <div>
               <label htmlFor="username">Username:</label>
               <Field type="text" id="username" placeholder='Enter your username' name="username" style={{width: "400px", border: 'none', borderRadius: '4px', padding: '10px'}} />
               <ErrorMessage name="username" component="div" style={{ color: "red" }} />
             </div>
+            {/* Password Field */}
             <div>
               <label htmlFor="password">Password:</label>
               <Field type="password" id="password" name="password" placeholder='Enter your password' style={{width: "400px", border: 'none', borderRadius: '4px', padding: '10px'}} />
