@@ -2,6 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
+    // Simple footer displaying current year dynamically
     <footer className="text-black mt-5" style={{ backgroundColor: "#ffb766" }}>
       <div className="container py-4">
         <div className="row text-center text-md-start">
