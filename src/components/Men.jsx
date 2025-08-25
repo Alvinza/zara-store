@@ -1,16 +1,17 @@
 import React from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/CartContext"; // Custom hook to manage cart actions
 import { Card } from "react-bootstrap";
-import menGallery from "../assets/menData/menData";
+import menGallery from "../assets/menData/menData"; // Array of products
 
 function Men() {
-  const { addToCart } = useCart();
+  const { addToCart } = useCart();// Destructure addToCart function from context
 
   return (
     // Store section, I used bootstrap for the card, I also used map method to render the products
     <div className="storeImage productsBackground">
       <h1 className="text-center">Men</h1>
       <div className="d-flex flex-wrap products">
+        {/* Map over menGallery array and render each product */}
         {menGallery.map((product) => (
           <Card key={product.id} style={{ width: "18rem", margin: "10px" }}>
             <Card.Img variant="top" src={product.image} />
