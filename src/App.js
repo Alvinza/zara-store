@@ -23,7 +23,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState(null); // Track the currently logged-in user
   const [showSearch, setShowSearch] = useState(false); // control search modal
 
-  // 🔹 On first load, check if users & logged-in user exist in localStorage
+  //  On first load, check if users & logged-in user exist in localStorage
   useEffect(() => {
     const savedUsers = localStorage.getItem('users');
     const savedUser = localStorage.getItem('loggedInUser');
@@ -32,19 +32,19 @@ function App() {
     if (savedUser) setLoggedInUser(JSON.parse(savedUser));
   }, []);
 
-  // 🔹 Handle login
+  //  Handle login
   const handleLogin = (user) => {
     setLoggedInUser(user);
     localStorage.setItem('loggedInUser', JSON.stringify(user));
   };
 
-  // 🔹 Handle logout
+  //  Handle logout
   const handleLogout = () => {
     setLoggedInUser(null);
     localStorage.removeItem('loggedInUser');
   };
 
-  // 🔹 Handle register (also save to localStorage)
+  // Handle register (also save to localStorage)
   const handleRegister = (newUser) => {
     setUsers((prevUsers) => {
       const updatedUsers = [...prevUsers, newUser];
