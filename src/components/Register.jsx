@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Register({ onRegister }) {
   const navigate = useNavigate();
+  // Initial form field values
   const initialValues = {
     firstName: "",
     surname: "",
@@ -13,6 +14,7 @@ function Register({ onRegister }) {
     password: "",
   };
 
+  // Validation schema using Yup
   const validationSchema = Yup.object({
     firstName: Yup.string().required("First name is required"),
     surname: Yup.string().required("Surname is required"),
@@ -29,6 +31,7 @@ function Register({ onRegister }) {
       .required("Password is required"),
   });
 
+  // Handle form submission
   const handleSubmit = (values, { resetForm }) => {
     onRegister(values); // Add new user
     resetForm(); // Clear the form
@@ -48,26 +51,31 @@ function Register({ onRegister }) {
         {() => (
           <Form > 
             <div>
+              {/* Name Field */}
               <label htmlFor="firstName">First Name:</label>
               <Field type="text" id="firstName" name="firstName" />
               <ErrorMessage name="firstName" component="div" style={{ color: "red" }} />
             </div>
             <div>
+              {/* Surname Field */}
               <label htmlFor="surname">Surname:</label>
               <Field type="text" id="surname" name="surname"  />
               <ErrorMessage name="surname" component="div" style={{ color: "red" }} />
             </div>
             <div>
+              {/* Username Field */}
               <label htmlFor="username">Username:</label>
               <Field type="text" id="username" name="username"  />
               <ErrorMessage name="username" component="div" style={{ color: "red" }} />
             </div>
             <div>
+              {/* Email Field */}
               <label htmlFor="email">Email:</label>
               <Field type="email" id="email" name="email" />
               <ErrorMessage name="email" component="div" style={{ color: "red" }} />
             </div>
             <div>
+              {/* Password Field */}
               <label htmlFor="password">Password:</label>
               <Field type="password" id="password" name="password" />
               <ErrorMessage name="password" component="div" style={{ color: "red" }} />
