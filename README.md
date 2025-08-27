@@ -21,7 +21,13 @@ A modern and responsive e-commerce website built with React, featuring product b
   - Shoes 👟  
   - Jewellery 💍  
   - Men’s Clothing 👔  
-  - Women’s Clothing 👗  
+  - Women’s Clothing 👗
+## 🔎 Search Feature
+
+- The website includes a search functionality where users can quickly find products.
+- Users can type the product name in the search bar, and the matching items will be displayed instantly.
+- This improves navigation and makes it easier for users to discover specific products.
+
 - **Responsive Design**: Optimized for desktop, tablet, and mobile  
 - **Bootstrap Styling**: Fast, modern layout with inline styling for extra customization  
 
