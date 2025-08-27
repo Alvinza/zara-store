@@ -17,6 +17,9 @@ import Shoes from './components/Shoes.jsx';
 import Footer from './components/Footer.jsx';
 import SearchModal from './components/SearchModal';
 import jewelleryGallery from './assets/jewelleryData/jewelleryData';
+import menGallery from './assets/menData/menData';
+import womenGallery from './assets/womenData/womenData';
+import shoesGallery from './assets/shoesData/shoesData';
 
 function App() {
   const [users, setUsers] = useState([]); // Store registered users
@@ -53,8 +56,8 @@ function App() {
     });
   };
   
-  // ✅ Combine all products (expand this when you add men/women/shoes arrays)
-  const allProducts = [...jewelleryGallery];
+  // ✅ Combined all products 
+  const allProducts = [...jewelleryGallery, ...menGallery, womenGallery, ...shoesGallery];
 
 
   return (
