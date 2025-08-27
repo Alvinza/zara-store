@@ -18,7 +18,7 @@ import Footer from './components/Footer.jsx';
 import SearchModal from './components/SearchModal';
 import jewelleryGallery from './assets/jewelleryData/jewelleryData';
 // import menGallery from './assets/menData/menData';
-// import womenGallery from './assets/womenData/womenData';
+import womenGallery from './assets/womenData/womenData';
 import shoesGallery from './assets/shoesData/shoesData';
 
 function App() {
@@ -57,7 +57,7 @@ function App() {
   };
   
   // ✅ Combined all products 
-  const allProducts = [...jewelleryGallery, ...shoesGallery];
+  const allProducts = [...jewelleryGallery, ...shoesGallery, ...womenGallery];
 
 
   return (
