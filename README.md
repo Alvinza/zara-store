@@ -5,6 +5,9 @@ A modern and responsive e-commerce website built with React, featuring product b
 ## 🌐 Live Demo
 
 **[View Live App](https://zara-store-1ctr.onrender.com)**  
+## Screenshot
+![Project Screenshot](src/assets/screenshot.png)
+
 
 ## ✨ Features
 
