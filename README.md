@@ -8,7 +8,6 @@ A modern and responsive e-commerce website built with React, featuring product b
 ## Screenshot
 ![Project Screenshot](src/assets/screenshot.png)
 
-
 ## ✨ Features
 
 - **User Authentication**: Users can register and log in, with login information saved in local storage for persistence  
